@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Liga - Ligas Virtuales MX</title>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #10b981;
+            --secondary-color: #021734;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #34d399;
+            --secondary-color: #021734;
+        }
+    }
+    
+    @layer base {
+        [data-theme="dark"] body {
+            @apply bg-gray-900 text-gray-100;
+        }
+        
+        [data-theme="dark"] .bg-white {
+            @apply bg-gray-800;
+        }
+        
+        [data-theme="dark"] .bg-gray-50 {
+            @apply bg-gray-900;
+        }
+        
+        [data-theme="dark"] .bg-gray-100 {
+            @apply bg-gray-700;
+        }
+        
+        [data-theme="dark"] .bg-green-50 {
+            @apply bg-green-900 bg-opacity-20;
+        }
+        
+        [data-theme="dark"] .bg-green-100 {
+            @apply bg-green-900 bg-opacity-30;
+        }
+        
+        [data-theme="dark"] .text-gray-900 {
+            @apply text-gray-100;
+        }
+        
+        [data-theme="dark"] .text-gray-600 {
+            @apply text-gray-400;
+        }
+        
+        [data-theme="dark"] .text-gray-700 {
+            @apply text-gray-300;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="utils/authManager.js"></script>
+    <script type="text/babel" src="utils/dataManager.js"></script>
+    <script type="text/babel" src="utils/simulator.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/PlayoffBracket.js"></script>
+    <script type="text/babel" src="admin-league-app.js"></script>
+</body>
+</html>

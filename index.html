@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligas Virtuales MX - Sistema de Gestión de Ligas de Fútbol</title>
+    <meta name="description" content="Plataforma completa de gestión de ligas de fútbol virtuales con 6 ligas, 120 equipos y sistema de ascensos y descensos">
+    <meta name="keywords" content="ligas de fútbol, fútbol virtual, gestión de ligas, torneo de fútbol">
+    <meta property="og:title" content="Ligas Virtuales MX">
+    <meta property="og:description" content="Sistema profesional de ligas de fútbol virtuales">
+    <meta name="twitter:title" content="Ligas Virtuales MX">
+    <meta name="twitter:description" content="Sistema profesional de ligas de fútbol virtuales">
+    
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #10b981;
+            --secondary-color: #021734;
+            --accent-color: #34d399;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #34d399;
+            --secondary-color: #021734;
+            --accent-color: #6ee7b7;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-gray-50 text-gray-900;
+        }
+        
+        [data-theme="dark"] body {
+            @apply bg-gray-900 text-gray-100;
+        }
+        
+        [data-theme="dark"] .bg-white {
+            @apply bg-gray-800;
+        }
+        
+        [data-theme="dark"] .bg-gray-50 {
+            @apply bg-gray-900;
+        }
+        
+        [data-theme="dark"] .bg-gray-100 {
+            @apply bg-gray-700;
+        }
+        
+        [data-theme="dark"] .text-gray-900 {
+            @apply text-gray-100;
+        }
+        
+        [data-theme="dark"] .text-gray-600 {
+            @apply text-gray-400;
+        }
+        
+        [data-theme="dark"] .text-gray-700 {
+            @apply text-gray-300;
+        }
+        
+        [data-theme="dark"] .border-gray-200 {
+            @apply border-gray-700;
+        }
+        
+        [data-theme="dark"] .hover\:bg-gray-50:hover {
+            @apply bg-gray-700;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-3 bg-[var(--primary-color)] text-white rounded-lg font-semibold hover:bg-[var(--secondary-color)] transition-colors;
+        }
+        .btn-secondary {
+            @apply px-6 py-3 bg-white text-[var(--primary-color)] border-2 border-[var(--primary-color)] rounded-lg font-semibold hover:bg-[var(--primary-color)] hover:text-white transition-colors;
+        }
+        .league-card {
+            @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="utils/authManager.js"></script>
+    <script type="text/babel" src="utils/dataManager.js"></script>
+    <script type="text/babel" src="utils/simulator.js"></script>
+    <script type="text/babel" src="utils/matchSimulator.js"></script>
+    <script type="text/babel" src="utils/matchScheduler.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/LeagueCard.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>

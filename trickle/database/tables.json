@@ -1,0 +1,226 @@
+[
+  {
+    "name": "league",
+    "fields": [
+      {
+        "name": "leagueId",
+        "type": "text",
+        "description": "Unique identifier for the league (league1-league6)",
+        "options": null
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "description": "League name (Liga 1, Liga 2, etc.)",
+        "options": null
+      },
+      {
+        "name": "level",
+        "type": "number",
+        "description": "League level/tier (1-6)",
+        "options": null
+      },
+      {
+        "name": "teamIds",
+        "type": "text",
+        "description": "Comma-separated list of team IDs in this league",
+        "options": null
+      },
+      {
+        "name": "playoffsGenerated",
+        "type": "bool",
+        "description": "Whether playoffs have been generated for this season",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "team",
+    "fields": [
+      {
+        "name": "teamId",
+        "type": "text",
+        "description": "Unique identifier for the team",
+        "options": null
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "description": "Team name",
+        "options": null
+      },
+      {
+        "name": "leagueId",
+        "type": "text",
+        "description": "ID of the league this team belongs to",
+        "options": null
+      },
+      {
+        "name": "titles",
+        "type": "number",
+        "description": "Number of championship titles won",
+        "options": null
+      },
+      {
+        "name": "played",
+        "type": "number",
+        "description": "Matches played",
+        "options": null
+      },
+      {
+        "name": "won",
+        "type": "number",
+        "description": "Matches won",
+        "options": null
+      },
+      {
+        "name": "drawn",
+        "type": "number",
+        "description": "Matches drawn",
+        "options": null
+      },
+      {
+        "name": "lost",
+        "type": "number",
+        "description": "Matches lost",
+        "options": null
+      },
+      {
+        "name": "goalsFor",
+        "type": "number",
+        "description": "Goals scored",
+        "options": null
+      },
+      {
+        "name": "goalsAgainst",
+        "type": "number",
+        "description": "Goals conceded",
+        "options": null
+      },
+      {
+        "name": "points",
+        "type": "number",
+        "description": "Total points accumulated",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "match",
+    "fields": [
+      {
+        "name": "matchId",
+        "type": "text",
+        "description": "Unique identifier for the match",
+        "options": null
+      },
+      {
+        "name": "leagueId",
+        "type": "text",
+        "description": "ID of the league this match belongs to",
+        "options": null
+      },
+      {
+        "name": "matchday",
+        "type": "number",
+        "description": "Matchday number (1-19)",
+        "options": null
+      },
+      {
+        "name": "homeTeamId",
+        "type": "text",
+        "description": "ID of the home team",
+        "options": null
+      },
+      {
+        "name": "awayTeamId",
+        "type": "text",
+        "description": "ID of the away team",
+        "options": null
+      },
+      {
+        "name": "played",
+        "type": "bool",
+        "description": "Whether the match has been played",
+        "options": null
+      },
+      {
+        "name": "homeScore",
+        "type": "number",
+        "description": "Home team score (null if not played)",
+        "options": null
+      },
+      {
+        "name": "awayScore",
+        "type": "number",
+        "description": "Away team score (null if not played)",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "playoff",
+    "fields": [
+      {
+        "name": "leagueId",
+        "type": "text",
+        "description": "ID of the league",
+        "options": null
+      },
+      {
+        "name": "round",
+        "type": "text",
+        "description": "Playoff round (quarterfinals, semifinals, final)",
+        "options": [
+          "quarterfinals",
+          "semifinals",
+          "final"
+        ]
+      },
+      {
+        "name": "matchNumber",
+        "type": "number",
+        "description": "Match number within the round",
+        "options": null
+      },
+      {
+        "name": "homeTeamId",
+        "type": "text",
+        "description": "ID of the home team",
+        "options": null
+      },
+      {
+        "name": "awayTeamId",
+        "type": "text",
+        "description": "ID of the away team",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "season",
+    "fields": [
+      {
+        "name": "year",
+        "type": "number",
+        "description": "Year of the season",
+        "options": null
+      },
+      {
+        "name": "season",
+        "type": "text",
+        "description": "Season type (Clausura or Apertura)",
+        "options": [
+          "Clausura",
+          "Apertura"
+        ]
+      },
+      {
+        "name": "currentMatchday",
+        "type": "number",
+        "description": "Current matchday number (1-19)",
+        "options": null
+      }
+    ]
+  }
+]
